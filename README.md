@@ -121,7 +121,7 @@ classDiagram
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/fact-check-agent.git
+   git clone https://github.com/akshaysharma2703/fact-check-agent.git
    cd fact-check-agent
    ```
 
@@ -153,24 +153,6 @@ classDiagram
 
 ---
 
-## ☁️ Streamlit Cloud Deployment Guide
-
-1. **Push code to GitHub**: Commit and push `app.py`, `extractor.py`, `verifier.py`, `search.py`, `utils.py`, `requirements.txt`, `.gitignore`, `.streamlit/`, and `trap_marketing_report.pdf`.
-2. **Access Streamlit Share**: Go to [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.
-3. **Deploy App**:
-   - Choose your repository, branch (e.g., `main`), and the main file path: `app.py`.
-4. **Environment Variables**:
-   - In the Streamlit deployment settings, select **Advanced settings**.
-   - Under **Secrets**, add your API keys:
-     ```toml
-     GROQ_API_KEY = "gsk_your_groq_key"
-     OPENAI_API_KEY = "sk-your_openai_key"
-     GEMINI_API_KEY = "your_gemini_key"
-     ```
-5. **Launch**: Click **Deploy** and wait for dependencies to compile.
-
----
-
 ## 🧪 Testing Instructions
 
 To validate the fact-checking engine against fake statistics, use the programmatically compiled PDF:
@@ -184,19 +166,6 @@ To validate the fact-checking engine against fake statistics, use the programmat
    - **Verified**: "Python released in 1991" / "Earth orbit completes in 365.25 days".
    - **False/Inaccurate**: "Paris population exactly 140 million" / "Eiffel Tower stands 3,000 meters tall in Rome".
 
----
-
-## 📽️ Demo Video Script (30 Seconds)
-
-**Narration Script:**
-> *"Introducing TruthLayer, your enterprise AI agent that audits marketing materials in seconds. Watch as we upload this Q3 marketing report containing unverified claims. The system parses the PDF, extracts key percentages, dates, and growth numbers, and searches the live web for validation. Within seconds, TruthLayer flags incorrect figures—such as Paris having a population of 140 million—corrects the statistic with verified sources, and provides the source URL. Download your clean fact-check report instantly. Secure your brand's integrity today with TruthLayer."*
-
-| Duration | Screen Action | Expected Output |
-| :--- | :--- | :--- |
-| **0:00 - 0:08** | Cursor clicks **Upload marketing PDF** and selects `trap_marketing_report.pdf`. | The PDF is loaded, page metrics appear, and "Analyze & Verify" is clicked. |
-| **0:08 - 0:18** | A progress bar moves dynamically showing "Extracting key claims using Groq..." and transitioning to "Verifying claim 2/5 (Groq)...". | The loading indicators move smoothly in the dark-mode dashboard. |
-| **0:18 - 0:25** | The verification results render. The user scrolls past KPI cards (1 Verified, 2 False) and clicks to expand a **False** claim. | Details expand showing the original context, supporting quotes, and corrected facts highlighted. |
-| **0:25 - 0:30** | The user clicks the **Download CSV Report** button to export the audit ledger. | The CSV downloads successfully, ending the demo. |
 
 ---
 
